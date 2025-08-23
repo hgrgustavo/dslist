@@ -1,8 +1,8 @@
 package com.devsuperior.dslist.application.services;
 
-import com.devsuperior.dslist.infrastructure.dto.GameDTO;
-import com.devsuperior.dslist.infrastructure.entities.Game;
-import com.devsuperior.dslist.infrastructure.dto.GameMinDTO;
+import com.devsuperior.dslist.application.dto.GameDTO;
+import com.devsuperior.dslist.infrastructure.persistence.Game;
+import com.devsuperior.dslist.application.dto.GameMinDTO;
 import com.devsuperior.dslist.infrastructure.projections.GameMinProjection;
 import com.devsuperior.dslist.domain.repositories.GameRepository;
 import lombok.AllArgsConstructor;

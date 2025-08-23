@@ -1,6 +1,6 @@
-package com.devsuperior.dslist.infrastructure.dto;
+package com.devsuperior.dslist.application.dto;
 
-import com.devsuperior.dslist.infrastructure.entities.Genre;
+import com.devsuperior.dslist.infrastructure.persistence.Genre;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.BeanUtils;
 

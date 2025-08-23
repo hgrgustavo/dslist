@@ -1,6 +1,6 @@
-package com.devsuperior.dslist.infrastructure.dto;
+package com.devsuperior.dslist.application.dto;
 
-import com.devsuperior.dslist.infrastructure.entities.Game;
+import com.devsuperior.dslist.infrastructure.persistence.Game;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

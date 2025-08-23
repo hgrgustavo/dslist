@@ -2,13 +2,12 @@ package com.devsuperior.dslist.presentation.controllers;
 
 import com.devsuperior.dslist.application.services.GameService;
 import com.devsuperior.dslist.application.services.GenreService;
-import com.devsuperior.dslist.infrastructure.dto.GameMinDTO;
-import com.devsuperior.dslist.infrastructure.dto.GenreDTO;
+import com.devsuperior.dslist.application.dto.GameMinDTO;
+import com.devsuperior.dslist.application.dto.GenreDTO;
+import com.devsuperior.dslist.presentation.dto.ReplacementDTO;
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 @RestController
@@ -26,5 +25,10 @@ public class GenreController {
     @GetMapping(value = "/{genreId}/games")
     public List<GameMinDTO> findByGenre(@PathVariable Long genreId) {
         return gameService.findByGenre(genreId);
+    }
+
+    @PostMapping(value = "/{genreId}/replacement")
+    public void move(@PathVariable Long genreId, @RequestBody ReplacementDTO body) {
+        genreService.move(genreId, body.getSourceIndex(), body.getDestinationIndex());
     }
 }
