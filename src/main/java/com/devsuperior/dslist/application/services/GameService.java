@@ -4,7 +4,7 @@ import com.devsuperior.dslist.infrastructure.dto.GameDTO;
 import com.devsuperior.dslist.infrastructure.entities.Game;
 import com.devsuperior.dslist.infrastructure.dto.GameMinDTO;
 import com.devsuperior.dslist.infrastructure.projections.GameMinProjection;
-import com.devsuperior.dslist.infrastructure.repositories.GameRepository;
+import com.devsuperior.dslist.domain.repositories.GameRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

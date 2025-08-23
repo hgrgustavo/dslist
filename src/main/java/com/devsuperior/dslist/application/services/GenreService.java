@@ -2,12 +2,14 @@ package com.devsuperior.dslist.application.services;
 
 import com.devsuperior.dslist.infrastructure.dto.GenreDTO;
 import com.devsuperior.dslist.infrastructure.entities.Genre;
-import com.devsuperior.dslist.infrastructure.repositories.GenreRepository;
+import com.devsuperior.dslist.domain.repositories.GenreRepository;
 import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+@Service
 @AllArgsConstructor
 public class GenreService {
     private GenreRepository genreRepository;
