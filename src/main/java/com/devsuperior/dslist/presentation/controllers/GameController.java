@@ -3,6 +3,8 @@ package com.devsuperior.dslist.presentation.controllers;
 import com.devsuperior.dslist.application.dto.GameDTO;
 import com.devsuperior.dslist.application.services.GameService;
 import com.devsuperior.dslist.application.dto.GameMinDTO;
+import com.devsuperior.dslist.domain.repositories.GameRepository;
+import com.devsuperior.dslist.infrastructure.persistence.Game;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

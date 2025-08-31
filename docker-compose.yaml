@@ -8,23 +8,30 @@ services:
     ports:
       - ${POSTGRES_WEB_PORT}
     volumes:
-      - ./.data/postgresql/data:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql/data
     networks:
       - dev-network
+
   pgadmin-docker:
     image: dpage/pgadmin4
     container_name: dev-pgadmin
     environment:
       PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
       PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
+      PGADMIN_CONFIG_ENHANCED_PROTECTION: "False"
     ports:
       - ${PGADMIN_WEB_PORT}
     volumes:
-      - ./config_local.py:/pgadmin4/config_local.py
+      - pgadmin_data:/var/lib/pgadmin
     depends_on:
       - pg-docker
     networks:
       - dev-network
+
+volumes:
+  postgres_data:
+  pgadmin_data:
+
 networks:
   dev-network:
     driver: bridge

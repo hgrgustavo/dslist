@@ -1,15 +1,17 @@
 package com.devsuperior.dslist.application.dto;
 
 import com.devsuperior.dslist.infrastructure.persistence.Genre;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.BeanUtils;
 
-@NoArgsConstructor
+@Getter
 public class GenreDTO {
-    private Long id;
-    private String name;
+    private final Long id;
+    private final String name;
 
     public GenreDTO(Genre entity) {
-        BeanUtils.copyProperties(entity, this);
+        this.id = entity.getId();
+        this.name = entity.getName();
     }
 }

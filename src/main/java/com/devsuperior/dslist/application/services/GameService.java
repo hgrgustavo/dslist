@@ -5,15 +5,15 @@ import com.devsuperior.dslist.infrastructure.persistence.Game;
 import com.devsuperior.dslist.application.dto.GameMinDTO;
 import com.devsuperior.dslist.infrastructure.projections.GameMinProjection;
 import com.devsuperior.dslist.domain.repositories.GameRepository;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class GameService {
-    private GameRepository gameRepository;
+    private final GameRepository gameRepository;
 
     @Transactional(readOnly = true)
     public GameDTO findById(Long id) {
