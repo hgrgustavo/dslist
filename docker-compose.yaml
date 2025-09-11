@@ -6,7 +6,7 @@ services:
       POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     ports:
-      - ${POSTGRES_WEB_PORT}
+      - ${POSTGRES_PORT}
     volumes:
       - postgres_data:/var/lib/postgresql/data
     networks:
@@ -18,9 +18,9 @@ services:
     environment:
       PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
       PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
-      PGADMIN_CONFIG_ENHANCED_PROTECTION: "False"
+      PGADMIN_CONFIB_ENHANCED_PROTECTION: "False"
     ports:
-      - ${PGADMIN_WEB_PORT}
+      - ${PGADMIN_PORT}
     volumes:
       - pgadmin_data:/var/lib/pgadmin
     depends_on:
