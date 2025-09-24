@@ -16,17 +16,13 @@ get_compose_extension() {
   fi
 }
 
-echo "Binding environment variables..."
+echo -n " ⚙️Binding environment variables..."
 source $PWD/.env
+echo " done."
 
-echo "Initializing Docker daemon..."
-if ! systemctl is-active --quiet docker; then
-  echo "Docker is inactive. Starting..."
-  sudo systemctl start docker
-fi
-
-echo "Formatting compose file..."
 docker compose config -q --format "$(get_compose_extension)"
+sudo docker compose up -d --quiet-build --quiet-pull
+echo " 🐋 Providing docker containers... done."
 
-echo "Loading containers..."
-sudo docker compose up -d
+echo -n " 🌱 Building Spring project... done."
+./mvnw spring-boot:run -DskipTests
