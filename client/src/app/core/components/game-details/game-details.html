@@ -9,12 +9,14 @@
   <div class="navigation_buttons">
     <button class="left_arrow"><</button>
     <button class="right_arrow">></button>
-    <p>Catalog</p>
-    <div class="cards_array">
-      <!--  TODO: implement games card array. -->
-    </div>
+  </div>
+  <p>Catalog</p>
+  <div class="cards_array">
+    <!--  TODO: implement games card array. -->
+    @for(game of gameData | async; track game.id) {
+      <mat-card class="card" appearance="outlined">
+        <img mat-card-image [src]="game.imageUrl | sanitizeUrl">
+      </mat-card>
+    }
   </div>
 </div>
-
-
-

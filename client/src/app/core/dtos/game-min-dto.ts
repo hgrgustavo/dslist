@@ -1,7 +1,7 @@
 export interface GameMinDTO {
   id: BigInteger;
-  title: String;
+  title: string;
   year: BigInteger;
-  imageUrl: String;
-  shortDescription: String;
+  imageUrl: string;
+  shortDescription: string;
 }

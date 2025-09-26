@@ -1,4 +1,4 @@
 export interface GenreDTO {
   id: BigInteger,
-  name: String
+  name: string
 }
