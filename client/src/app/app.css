@@ -1,8 +1,6 @@
 .toparea {
   display: flex;
-
   gap: 30px;
-
   margin: 0 auto;
   padding: 30px 0 30px 60px;
   align-items: center;
@@ -15,12 +13,9 @@
 
 .routes {
   display: flex;
-
   justify-content: center;
   margin: 15px 0 15px 0;
-
   gap: 30px;
-
 }
 
 hr {

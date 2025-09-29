@@ -4,7 +4,8 @@
 }
 
 .cards_array {
-  display:
+  display: flex;
+  gap: 12px;
 }
 
 .card {

@@ -1,8 +1,8 @@
 import { Component, } from '@angular/core';
 import { GameService } from '../../services/game-service';
-import { map, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { GameMinDTO } from '../../dtos/game-min-dto';
-import { AsyncPipe } from '@angular/common';
+import { AsyncPipe } from '@angular/common'
 import { MatCardModule } from '@angular/material/card';
 import { DomSanitizer } from '@angular/platform-browser';
 import { SanitizeUrlPipe } from '../../../shared/pipes/sanitize-url-pipe';
