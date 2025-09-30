@@ -1,18 +1,12 @@
 import { Component, signal } from '@angular/core';
-import { ActivatedRoute, RouterOutlet } from '@angular/router';
-import { Searchbar } from './core/components/searchbar/searchbar';
-import { Router } from 'express';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [
-    Searchbar,
-    RouterOutlet
-  ],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-
 export class App {
-
+  protected readonly title = signal('client');
 }
